@@ -1,1 +1,79 @@
 
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "harrison.pitch-distortion",
+	"name": "Pitch & Distortion",
+	"version": "v1.1.0",
+	"developer": "harrison",
+	"description": "Change pitch (without changing speed), distortion, reverb, echo and more on music. Works with Jukebox songs.",
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"default": true
+		},
+		"apply-in-levels": {
+			"type": "bool",
+			"name": "Apply in levels",
+			"description": "Pitch no longer changes speed, so this is safe to leave on.",
+			"default": true
+		},
+		"pitch-semitones": {
+			"type": "float",
+			"name": "Pitch (semitones)",
+			"description": "0 is normal. Changes pitch only, not speed.",
+			"default": 0.0,
+			"min": -12.0,
+			"max": 12.0,
+			"control": { "slider": true }
+		},
+		"speed": {
+			"type": "float",
+			"name": "Speed (menus only)",
+			"description": "Song speed without changing pitch. Ignored inside levels so the music stays in sync.",
+			"default": 1.0,
+			"min": 0.5,
+			"max": 2.0,
+			"control": { "slider": true }
+		},
+		"distortion": {
+			"type": "float",
+			"name": "Distortion",
+			"default": 0.0,
+			"min": 0.0,
+			"max": 1.0,
+			"control": { "slider": true }
+		},
+		"reverb": {
+			"type": "float",
+			"name": "Reverb",
+			"default": 0.0,
+			"min": 0.0,
+			"max": 1.0,
+			"control": { "slider": true }
+		},
+		"echo": {
+			"type": "float",
+			"name": "Echo",
+			"default": 0.0,
+			"min": 0.0,
+			"max": 1.0,
+			"control": { "slider": true }
+		},
+		"muffle": {
+			"type": "float",
+			"name": "Muffle (low-pass)",
+			"description": "Cuts high frequencies for an underwater or behind-a-wall sound.",
+			"default": 0.0,
+			"min": 0.0,
+			"max": 1.0,
+			"control": { "slider": true }
+		}
+	}
+}
