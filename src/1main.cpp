@@ -11,7 +11,7 @@ static bool g_inLevel = false;
 static void applyEffects() {
     auto engine = FMODAudioEngine::sharedEngine();
     if (!engine) return;
-    FMOD::Channel* channel = engine->m_backgroundMusicChannel;
+    FMOD::ChannelGroup* channel = engine->m_backgroundMusicChannel;
     if (!channel) return;
 
     auto mod = Mod::get();
